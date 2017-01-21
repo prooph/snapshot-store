@@ -28,7 +28,7 @@ final class Snapshot
     private $aggregateId;
 
     /**
-     * @var object
+     * @var object|array
      */
     private $aggregateRoot;
 
