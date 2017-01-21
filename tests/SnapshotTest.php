@@ -28,7 +28,7 @@ class SnapshotTest extends TestCase
             'foo',
             'some_id',
             [
-                'some' => 'thing'
+                'some' => 'thing',
             ],
             1,
             $now
@@ -52,7 +52,7 @@ class SnapshotTest extends TestCase
             '',
             'some_id',
             [
-                'some' => 'thing'
+                'some' => 'thing',
             ],
             1,
             new \DateTimeImmutable()
@@ -70,7 +70,7 @@ class SnapshotTest extends TestCase
             'foo',
             '',
             [
-                'some' => 'thing'
+                'some' => 'thing',
             ],
             1,
             new \DateTimeImmutable()
@@ -88,7 +88,7 @@ class SnapshotTest extends TestCase
             'foo',
             'some_id',
             [
-                'some' => 'thing'
+                'some' => 'thing',
             ],
             0,
             new \DateTimeImmutable()

@@ -29,7 +29,7 @@ class InMemorySnapshotStoreTest extends TestCase
             'foo',
             'some_id',
             [
-                'some' => 'thing'
+                'some' => 'thing',
             ],
             1,
             $now
