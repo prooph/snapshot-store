@@ -2,8 +2,8 @@
 
 Simple and lightweight snapshot store
 
-[![Build Status](https://travis-ci.org/prooph/event-sourcing.svg?branch=master)](https://travis-ci.org/prooph/event-sourcing)
-[![Coverage Status](https://img.shields.io/coveralls/prooph/event-sourcing.svg)](https://coveralls.io/r/prooph/event-sourcing?branch=master)
+[![Build Status](https://travis-ci.org/prooph/snapshot-store.svg?branch=master)](https://travis-ci.org/prooph/snapshot-store)
+[![Coverage Status](https://img.shields.io/coveralls/prooph/snapshot-store.svg)](https://coveralls.io/r/prooph/snapshot-store?branch=master)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/prooph/improoph)
 
 ## Installation
