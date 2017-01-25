@@ -28,8 +28,10 @@ final class InMemorySnapshotStore implements SnapshotStore
         return $this->map[$aggregateType][$aggregateId];
     }
 
-    public function save(Snapshot $snapshot): void
+    public function save(Snapshot ...$snapshots): void
     {
-        $this->map[$snapshot->aggregateType()][$snapshot->aggregateId()] = $snapshot;
+        foreach ($snapshots as $snapshot) {
+            $this->map[$snapshot->aggregateType()][$snapshot->aggregateId()] = $snapshot;
+        }
     }
 }
