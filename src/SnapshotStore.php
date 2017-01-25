@@ -16,5 +16,5 @@ interface SnapshotStore
 {
     public function get(string $aggregateType, string $aggregateId): ?Snapshot;
 
-    public function save(Snapshot $snapshot): void;
+    public function save(Snapshot ...$snapshots): void;
 }

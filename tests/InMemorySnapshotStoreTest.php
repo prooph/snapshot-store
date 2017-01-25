@@ -42,4 +42,38 @@ class InMemorySnapshotStoreTest extends TestCase
 
         $this->assertNull($snapshotStore->get('some', 'invalid'));
     }
+
+    /**
+     * @test
+     */
+    public function it_saves_multiple_snapshots(): void
+    {
+        $now = new \DateTimeImmutable();
+
+        $snapshot1 = new Snapshot(
+            'foo',
+            'some_id',
+            [
+                'some' => 'thing',
+            ],
+            1,
+            $now
+        );
+
+        $snapshot2 = new Snapshot(
+            'bar',
+            'some_other_id',
+            [
+                'some' => 'other_thing',
+            ],
+            1,
+            $now
+        );
+
+        $snapshotStore = new InMemorySnapshotStore();
+        $snapshotStore->save($snapshot1, $snapshot2);
+
+        $this->assertSame($snapshot1, $snapshotStore->get('foo', 'some_id'));
+        $this->assertSame($snapshot2, $snapshotStore->get('bar', 'some_other_id'));
+    }
 }
