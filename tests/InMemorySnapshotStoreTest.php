@@ -46,7 +46,7 @@ class InMemorySnapshotStoreTest extends TestCase
     /**
      * @test
      */
-    public function it_saves_multiple_snapshots(): void
+    public function it_saves_multiple_snapshots_and_removes_them(): void
     {
         $now = new \DateTimeImmutable();
 
@@ -70,10 +70,27 @@ class InMemorySnapshotStoreTest extends TestCase
             $now
         );
 
+        $snapshot3 = new Snapshot(
+            'bar',
+            'some_other_id_too',
+            [
+                'some' => 'other_thing_too',
+            ],
+            1,
+            $now
+        );
+
         $snapshotStore = new InMemorySnapshotStore();
-        $snapshotStore->save($snapshot1, $snapshot2);
+        $snapshotStore->save($snapshot1, $snapshot2, $snapshot3);
 
         $this->assertSame($snapshot1, $snapshotStore->get('foo', 'some_id'));
         $this->assertSame($snapshot2, $snapshotStore->get('bar', 'some_other_id'));
+        $this->assertSame($snapshot3, $snapshotStore->get('bar', 'some_other_id_too'));
+
+        $snapshotStore->removeAll('bar');
+
+        $this->assertSame($snapshot1, $snapshotStore->get('foo', 'some_id'));
+        $this->assertNull($snapshotStore->get('bar', 'some_other_id'));
+        $this->assertNull($snapshotStore->get('bar', 'some_other_id_too'));
     }
 }
