@@ -34,4 +34,9 @@ final class InMemorySnapshotStore implements SnapshotStore
             $this->map[$snapshot->aggregateType()][$snapshot->aggregateId()] = $snapshot;
         }
     }
+
+    public function removeAll(string $aggregateType): void
+    {
+        unset($this->map[$aggregateType]);
+    }
 }
