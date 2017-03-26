@@ -22,3 +22,10 @@ aggregate loading.
 Our example application [proophessor-do](https://github.com/prooph/proophessor-do) contains a snapshotting tutorial.
 
 *Note: All SnapshotStores ship with interop factories to ease set up.*
+
+## Usage
+
+Using [Prooph Event-Sourcing](https://github.com/prooph/event-sourcing/) you need to install [Prooph Snapshotter](https://github.com/prooph/snapshotter).
+Check the documentation there on how to use it.
+
+Using [Prooph Micro](https://github.com/prooph/micro/) the usage is a simple php function.
