@@ -23,7 +23,7 @@ Our example application [proophessor-do](https://github.com/prooph/proophessor-d
 
 ## Using a different Serializer. 
 
-By default we use php build in serialize/unserialize methods to around aggregate persistence. If you would like to change it you can do that since v1.1. 
+By default prooph uses PHP's own serialise and unserialize methods. These may not suite your needs so as of v1.1 of the snapshot store you can use a custom serialiser. 
 
 You can use the provided CallbackSerializer to do this.
 
