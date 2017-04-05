@@ -43,7 +43,8 @@ If you are using the interop factories all you have to do is create a Factory fo
 
 return [
 	'dependencies' => [
-		'factories' => \Prooph\SnapshotStore\Serializer::class => My\CallbackSerializerFactory::class,
+		'factories' => [
+		    \Prooph\SnapshotStore\Serializer::class => My\CallbackSerializerFactory::class,
 		],
 	],
 ]

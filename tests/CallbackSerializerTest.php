@@ -45,7 +45,7 @@ class CallbackSerializerTest extends TestCase
     /**
      * @test
      */
-    public function it_both_callback_are_required_before_default_is_not_used(): void
+    public function it_uses_default_if_only_one_callback_provided_instead_of_two(): void
     {
         $serializer = new CallbackSerializer(function ($data): string {
             return (string) ($data * 2);

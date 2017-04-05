@@ -17,18 +17,18 @@ final class CallbackSerializer implements Serializer
     /**
      * callable
      */
-    private $serializer = 'serialize';
+    private $serializeCallback = 'serialize';
 
     /**
      * callable
      */
-    private $deserialize = 'unserialize';
+    private $unserializeCallback = 'unserialize';
 
-    public function __construct(?callable $serializer, ?callable $deserialize)
+    public function __construct(?callable $serializeCallback, ?callable $unserializeCallback)
     {
-        if (null !== $serializer && null !== $deserialize) {
-            $this->serializer = $serializer;
-            $this->deserialize = $deserialize;
+        if (null !== $serializeCallback && null !== $unserializeCallback) {
+            $this->serializeCallback = $serializeCallback;
+            $this->unserializeCallback = $unserializeCallback;
         }
     }
 
@@ -38,7 +38,7 @@ final class CallbackSerializer implements Serializer
      */
     public function serialize($data): string
     {
-        return call_user_func_array($this->serializer, [$data]);
+        return call_user_func_array($this->serializeCallback, [$data]);
     }
 
     /**
@@ -47,6 +47,6 @@ final class CallbackSerializer implements Serializer
      */
     public function unserialize(string $serialized)
     {
-        return call_user_func_array($this->deserialize, [$serialized]);
+        return call_user_func_array($this->unserializeCallback, [$serialized]);
     }
 }
