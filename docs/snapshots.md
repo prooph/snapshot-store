@@ -21,6 +21,34 @@ aggregate loading.
 
 Our example application [proophessor-do](https://github.com/prooph/proophessor-do) contains a snapshotting tutorial.
 
+## Using a different Serializer. 
+
+By default we use php build in serialize/unserialize methods to around aggregate persistence. If you would like to change it you can do that since v1.1. 
+
+You can use the provided CallbackSerializer to do this.
+
+```
+new PdoSnapshotStore(
+   $connection,
+   $config['snapshot_table_map'],
+   $config['default_snapshot_table_name'],
+   new CallbackSerializer('igbinary_serialize', 'igbinary_unserialize')
+);
+```
+
+If you are using the interop factories all you have to do is create a Factory for `Prooph\SnapshotStore\Serializer` and add that as dependency;
+
+```
+<?php
+
+return [
+	'dependencies' => [
+		'factories' => \Prooph\SnapshotStore\Serializer::class => My\CallbackSerializerFactory::class,
+		],
+	],
+]
+``` 
+
 *Note: All SnapshotStores ship with interop factories to ease set up.*
 
 ## Usage
