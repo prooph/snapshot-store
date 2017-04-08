@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the prooph/pdo-snapshot-store.
+ * This file is part of the prooph/snapshot-store.
  * (c) 2016-2017 prooph software GmbH <contact@prooph.de>
  * (c) 2016-2017 Sascha-Oliver Prolic <saschaprolic@googlemail.com>
  *
