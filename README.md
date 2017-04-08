@@ -13,7 +13,7 @@ You can install Prooph Snapshot Store via composer by adding `"prooph/snapshot-s
 # Support
 
 - Ask any questions on [prooph-users](https://groups.google.com/forum/?hl=de#!forum/prooph) google group.
-- File issues at [https://github.com/prooph/event-sourcing/issues](https://github.com/prooph/event-sourcing/issues).
+- File issues at [https://github.com/prooph/snapshot-store/issues](https://github.com/prooph/snapshot-store/issues).
 
 ## Contribute
 
