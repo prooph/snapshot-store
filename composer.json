@@ -31,7 +31,12 @@
         "prooph/php-cs-fixer-config": "^0.1.1",
         "satooshi/php-coveralls": "^1.0",
         "prooph/bookdown-template": "^0.2.3",
-        "malukenho/docheader": "^0.1.4"
+        "psr/container": "^1.0",
+        "malukenho/docheader": "^0.1.4",
+        "sandrokeil/interop-config": "^2.0.1"
+    },
+    "suggest": {
+        "sandrokeil/interop-config": "^2.0.1 for usage of provided factories"
     },
     "extra": {
         "branch-alias": {

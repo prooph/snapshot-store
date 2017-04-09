@@ -120,7 +120,6 @@ class CompositeSnapshotStoreTest extends TestCase
 
     /**
      * @test
-     * @group by
      */
     public function it_returns_result_from_first_store_with_content(): void
     {
