@@ -27,7 +27,9 @@ By default prooph uses PHP's own serialise and unserialize methods. These may no
 
 You can use the provided CallbackSerializer to do this.
 
-```
+```php
+<?php
+
 new PdoSnapshotStore(
    $connection,
    $config['snapshot_table_map'],
@@ -38,7 +40,7 @@ new PdoSnapshotStore(
 
 If you are using the interop factories all you have to do is create a Factory for `Prooph\SnapshotStore\Serializer` and add that as dependency;
 
-```
+```php
 <?php
 
 return [
@@ -47,10 +49,29 @@ return [
 		    \Prooph\SnapshotStore\Serializer::class => My\CallbackSerializerFactory::class,
 		],
 	],
-]
+];
 ``` 
 
 *Note: All SnapshotStores ship with interop factories to ease set up.*
+
+## Composite Snapshot Store
+
+This component ships with a composite snapshot store, that aggregates multiple snapshot stores. When asked to save a
+snapshot or removeAll, it will call the method in all aggregated snapshot stores. If you try to get a snapshot from the
+composite, it will ask each snapshot store for the snapshot and return the earliest snapshot found or null.
+
+This is especially useful to combine a memcached snapshot store for high speed with a fallback like pdo or mongodb.
+
+Example:
+
+```php
+<?php
+
+$snapshotStore1 = new MemcachedSnapshotStore();
+$snapshotStore2 = new MongoDbSnapshotStore();
+
+$snapshotStore = new CompositeSnapshotStore($snapshotStore1, $snapshotStore2);
+```
 
 ## Usage
 
