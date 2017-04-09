@@ -58,7 +58,7 @@ return [
 
 This component ships with a composite snapshot store, that aggregates multiple snapshot stores. When asked to save a
 snapshot or removeAll, it will call the method in all aggregated snapshot stores. If you try to get a snapshot from the
-composite, it will ask each snapshot store for the snapshot and return the earliest snapshot found or null.
+composite, it will ask each snapshot store for the snapshot and returns the first snapshot found or null.
 
 This is especially useful to combine a memcached snapshot store for high speed with a fallback like pdo or mongodb.
 
