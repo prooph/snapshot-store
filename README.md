@@ -12,7 +12,7 @@ You can install Prooph Snapshot Store via composer by adding `"prooph/snapshot-s
 
 # Support
 
-- Ask any questions on [prooph-users](https://groups.google.com/forum/?hl=de#!forum/prooph) google group.
+- Ask questions on Stack Overflow tagged with [#prooph](https://stackoverflow.com/questions/tagged/prooph).
 - File issues at [https://github.com/prooph/snapshot-store/issues](https://github.com/prooph/snapshot-store/issues).
 
 ## Contribute
