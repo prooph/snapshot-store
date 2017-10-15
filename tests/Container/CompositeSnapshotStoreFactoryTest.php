@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the prooph/memcached-snapshot-store.
+ * This file is part of the prooph/snapshot-store.
  * (c) 2017-2017 prooph software GmbH <contact@prooph.de>
  * (c) 2017-2017 Sascha-Oliver Prolic <saschaprolic@googlemail.com>
  *
@@ -12,7 +12,6 @@ declare(strict_types=1);
 
 namespace ProophTest\SnapshotStore\Container;
 
-use Memcached;
 use PHPUnit\Framework\TestCase;
 use Prooph\SnapshotStore\CompositeSnapshotStore;
 use Prooph\SnapshotStore\Container\CompositeSnapshotStoreFactory;
