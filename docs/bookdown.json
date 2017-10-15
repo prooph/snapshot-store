@@ -1,8 +1,8 @@
 {
   "title": "Snapshot Store",
   "content": [
-    {"intro": "../README.md"},
-    {"snapshots": "snapshot_store.md"}
+    {"snapshot_store": "snapshot_store.md"},
+    {"mongodb_snapshot_store": "https://raw.githubusercontent.com/prooph/mongodb-snapshot-store/master/docs/bookdown.json"}
   ],
   "tocDepth": 1,
   "numbering": false,
