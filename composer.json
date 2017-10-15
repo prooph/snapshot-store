@@ -28,6 +28,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^6.0",
+        "phpspec/prophecy": "^1.7",
         "prooph/php-cs-fixer-config": "^0.1.1",
         "satooshi/php-coveralls": "^1.0",
         "prooph/bookdown-template": "^0.2.3",
@@ -61,10 +62,12 @@
     "scripts": {
         "check": [
             "@cs",
-            "@test"
+            "@test",
+            "@docheader"
         ],
         "cs": "php-cs-fixer fix -v --diff --dry-run",
         "cs-fix": "php-cs-fixer fix -v --diff",
+        "docheader": "docheader check src/ tests/",
         "test": "phpunit"
     }
 }
