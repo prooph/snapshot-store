@@ -14,9 +14,8 @@ namespace ProophTest\SnapshotStore\Container;
 
 use Memcached;
 use PHPUnit\Framework\TestCase;
-use Prooph\SnapshotStore\CallbackSerializer;
-use Prooph\SnapshotStore\Container\CompositeSnapshotStoreFactory;
 use Prooph\SnapshotStore\CompositeSnapshotStore;
+use Prooph\SnapshotStore\Container\CompositeSnapshotStoreFactory;
 use Prooph\SnapshotStore\SnapshotStore;
 use Psr\Container\ContainerInterface;
 

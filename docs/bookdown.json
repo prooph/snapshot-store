@@ -4,6 +4,8 @@
     {"intro": "../README.md"},
     {"snapshots": "snapshot_store.md"}
   ],
+  "tocDepth": 1,
+  "numbering": false,
   "target": "./html",
   "template": "../vendor/prooph/bookdown-template/templates/main.php"
 }
