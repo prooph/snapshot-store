@@ -1,8 +1,8 @@
 {
-  "title": "Prooph Snapshot Store",
+  "title": "Snapshot Store",
   "content": [
     {"intro": "../README.md"},
-    {"snapshots": "snapshots.md"}
+    {"snapshots": "snapshot_store.md"}
   ],
   "target": "./html",
   "template": "../vendor/prooph/bookdown-template/templates/main.php"

@@ -1,14 +1,12 @@
-# Snapshots
+# Overview
 
-One of the counter-arguments against Event-Sourcing you might heard about is that replaying events takes too much time.
+Simple and lightweight snapshot store that works together with `prooph/event-sourcing` to speed up loading of aggregates.
 
-Replaying 20 events for an aggregate is fast, 50 is ok, but 100 events and more become slow depending on the data of the events and the operations needed to replay them.
-A DDD rule of thumb says aggregates should be kept small. Keeping that in mind you should be fine with 50 events per aggregate
-in most cases.
+## Installation
 
-## But my aggregates record tons of events!
-If aggregate reconstitution gets slow you can add an additional layer to the system which
-is capable of providing aggregate snapshots.
+```bash
+composer require prooph/snapshot-store
+```
 
 ## Creating snapshots from event streams
 
