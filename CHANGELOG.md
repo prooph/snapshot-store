@@ -1,7 +1,18 @@
 # Change Log
 
-## [v1.2.0](https://github.com/prooph/snapshot-store/tree/v1.2.0)
+## [v1.3.0](https://github.com/prooph/snapshot-store/tree/v1.3.0)
 
+[Full Changelog](https://github.com/prooph/snapshot-store/compare/v1.2.0...v1.3.0)
+
+**Implemented enhancements:**
+
+- test php 7.2 on travis [\#10](https://github.com/prooph/snapshot-store/pull/10) ([prolic](https://github.com/prolic))
+
+**Merged pull requests:**
+
+- Restructure docs [\#9](https://github.com/prooph/snapshot-store/pull/9) ([codeliner](https://github.com/codeliner))
+
+## [v1.2.0](https://github.com/prooph/snapshot-store/tree/v1.2.0) (2017-04-11)
 [Full Changelog](https://github.com/prooph/snapshot-store/compare/v1.1.0...v1.2.0)
 
 **Implemented enhancements:**
