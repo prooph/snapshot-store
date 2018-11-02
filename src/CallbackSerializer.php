@@ -1,8 +1,9 @@
 <?php
+
 /**
- * This file is part of the prooph/snapshot-store.
- * (c) 2017-2017 prooph software GmbH <contact@prooph.de>
- * (c) 2017-2017 Sascha-Oliver Prolic <saschaprolic@googlemail.com>
+ * This file is part of prooph/snapshot-store.
+ * (c) 2017-2018 prooph software GmbH <contact@prooph.de>
+ * (c) 2017-2018 Sascha-Oliver Prolic <saschaprolic@googlemail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -38,7 +39,7 @@ final class CallbackSerializer implements Serializer
      */
     public function serialize($data): string
     {
-        return call_user_func($this->serializeCallback, $data);
+        return \call_user_func($this->serializeCallback, $data);
     }
 
     /**
@@ -47,6 +48,6 @@ final class CallbackSerializer implements Serializer
      */
     public function unserialize(string $serialized)
     {
-        return call_user_func($this->unserializeCallback, $serialized);
+        return \call_user_func($this->unserializeCallback, $serialized);
     }
 }
